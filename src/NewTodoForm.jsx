@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function NewTodoForm({ onSubmit }) {
+export default function NewTodoForm({ onSubmit }) {
   const [newItem, setNewItem] = useState("")
 
   function handleSubmit(e) {
@@ -21,6 +21,7 @@ export function NewTodoForm({ onSubmit }) {
           onChange={e => setNewItem(e.target.value)}
           type="text"
           id="item"
+          placeholder=" . . ."
         />
       </div>
       <button className="btn">Add</button>
